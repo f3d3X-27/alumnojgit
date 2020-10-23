@@ -6,11 +6,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 @SpringBootApplication
 public class AlumnojgitApplication {
 
-	public static void main(String[] args) throws IOException, GitAPIException {
+	public static void main(String[] args) throws IOException, GitAPIException, URISyntaxException {
 
 		//SpringApplication.run(AlumnojgitApplication.class, args);
 
@@ -21,9 +22,12 @@ public class AlumnojgitApplication {
 		GitControl gc = new GitControl(localPath, remotePath);
 
 		//gc.repolocal(); // 1- Metodo utilizado
-		gc.addToRepo();
+		gc.addToRepo(); // 2- Metodo utilizado 6- Metodo utilizado
+        //gc.commitToRepo("Repositorio local creado"); // 3- Metodo utilizado 7- metodo utilizado
+		//gc.createNewBranch("development"); // 4 - Metodo utilizado
+		//gc.remoteAddOrigin(remotePath); //5- Metodo utilizado
 
-		//gc.createNewBranch("development"); //2- Metodo utilizado
+
 
 
 
